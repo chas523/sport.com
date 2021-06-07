@@ -1,0 +1,123 @@
+@media (max-width: 991px) {
+    .container {
+        padding: 0 20px; 
+    }
+    .advantages__items{
+        width: 230px;
+    }
+} 
+@media (max-width: 768px) {
+    .header {
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        background-color: $navbar;
+        height: 61px;
+        &__logo {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            z-index: 10;
+            width: 200px;
+        }
+        &__official{
+            display: none;
+        }
+        &__contacts{
+            display: none;
+        }
+        .hamburger {
+            display: block; 
+            position: absolute;
+            top: 0px;
+            right: 0px
+        }
+    }
+    .display {
+        height: 150px;
+        transition: 0.2s all;
+        justify-content: space-around;
+        .header {
+          
+            &__official {
+                padding-top: 20px;
+                display: block;
+            }
+            &__contacts {
+                padding-top: 20px;
+                display: block;
+                .button {
+                    background-color: white;
+                    color: black
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 576px) {
+   .promo {
+       &__header {
+           font-size: 30px;
+       }
+       &__subheader {
+           font-size: 22px;
+       }
+   }
+   .advantages {
+       &__wrapper {
+           display: block;
+       }
+       &__items {
+           width: auto;
+       }
+   }
+}
+@media (max-width: 500px) {
+    .promo {
+        &__header {
+            font-size: 20px;
+        }
+        &__subheader {
+            font-size: 15px;
+        }
+        &__icons {
+            width: auto;
+        }
+        &__wrapper{
+            display: block;
+        }
+    }
+    .header__phone {
+        font-size: 17px;
+        font-weight: 300;
+    }
+    .header__official {
+        font-size: auto;
+        font-weight: 300;
+    }
+    .display {
+        height: 350px;
+        transition: 0.2s all;
+        flex-direction: column;
+        justify-content: center;
+        .header {
+            &__official {
+                padding-top: 20px;
+                display: block;
+            }
+            &__contacts {
+                padding-top: 40px;
+                display: block;
+                .button {
+                    background-color: white;
+                    color: black
+                }
+            }
+        }
+    }
+    .button_main { 
+        width: 264px;
+    }
+}
