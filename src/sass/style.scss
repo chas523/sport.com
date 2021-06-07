@@ -1,4 +1,5 @@
 @import 'base/variables';
+@import 'base/hamburger';
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -12,3 +13,6 @@
 @import 'bloks/buttons'; 
 @import 'bloks/advantages';
 @import 'bloks/title'; 
+
+
+@import 'base/media'
