@@ -10,6 +10,9 @@
         background-color: #ffffff;
         margin-bottom: 15px;
         padding: 0 20px;
+        &:focus{
+            border: 2px solid rgb(123, 123, 243);
+        }
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
