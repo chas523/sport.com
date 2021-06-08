@@ -73,7 +73,13 @@
         font-size: 24px;
         text-align: center;
     }
-
+    .footer__info{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: none;
+    }
 }
 @media (max-width: 576px) {
    .promo {
@@ -103,6 +109,13 @@
        div {
            transform: none;
        }
+   }
+   .reviews__item{
+       display: block; 
+   }
+   .reviews__right-part{
+       margin-left: 0;
+       margin-top: 10px;
    }
 }
 @media (max-width: 500px) {
@@ -153,5 +166,12 @@
     }
     .catalog-item__prices {
         font-size: 17px;
+    }
+    .overlay .modal__close {
+        top: 0px;
+        right: 0px;
+    }
+    .overlay .modal{
+        width: 100%;
     }
 }

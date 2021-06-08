@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $('.hamburger').click(function() {
         $('.hamburger').toggleClass("is-active"); 
@@ -36,6 +37,58 @@ $(document).ready(function(){
     }
     toogleSlide('.catalog-item__link'); 
     toogleSlide('.catalog-item__back'); 
+
+    //modal 
+    $('[data-modal=consultation]').on('click',function() {
+        $('.overlay, #consultation').fadeIn();
+    }); 
+    $('.modal__close').on('click',function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut(); 
+    });
+    
+    $('.catalog-item__btn').each(function(i){
+        $(this).on('click', function(){
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn();
+        }); 
+    });
+    //consultation form
+    function formValidate(form){
+        $(form).validate({
+            rules: {
+                first_name: {
+                    required: true,
+                    minlength: 3,
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                tel: {
+                    required: true
+                }
+            },
+            messages: {
+                first_name: {
+                    required: "Это поле обезательное",
+                    minlength: "Имя должно состоять из 3 или более символов"
+                },
+                email: {
+                    required: "Это поле обезательное",
+                    email: "Введён неврный email адресс"
+                },
+                tel: {
+                    required: "Это поле обезательное"
+                }
+            }
+        }); 
+    }
+    formValidate('#consultation form'); 
+    formValidate('#order form'); 
+    formValidate('#contact-from'); 
+
+    $("input[name=tel]").mask("+7 (999) 999-9999");
+
 
 
 
