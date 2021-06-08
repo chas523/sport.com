@@ -10,6 +10,9 @@
         margin: 0 auto; 
         width: 80%;
     }
+    .catalog__content_active {
+        justify-content: space-around;
+    }
 } 
 @media (max-width: 768px) {
     .carousel__inner {
@@ -89,6 +92,18 @@
            width: auto;
        }
    }
+   .catalog__tabs{
+        display: block;
+       
+   }
+   .catalog__tab{
+       transform: none;
+       width: 100%;
+       margin-bottom: 5px;
+       div {
+           transform: none;
+       }
+   }
 }
 @media (max-width: 500px) {
     .promo {
@@ -135,5 +150,8 @@
     }
     .button_main { 
         width: 264px;
+    }
+    .catalog-item__prices {
+        font-size: 17px;
     }
 }
